@@ -15,11 +15,11 @@ const start = ()=>{
          return newPassword
          
     }
-    const answer = ()=>{
+    const addRow = ()=>{
         document.getElementById('newPass').value = newPassword
     }
     generateRandomPassword(size)
-    answer()
+    addRow()
     
     console.log(newPassword)
 }

@@ -15,23 +15,42 @@
           <span class="navbar-brand text-justify p-2">Gerador de senhas</span>
         </nav>
         <br>
-        <div class="input-group mb-3 ">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Número de dígitos:</span>
-          </div>
-          <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" id="charNum" onkeyup="start()">
-          <div class="input-group-append">
-            <button type="button" class="btn btn-secondary"  onclick="start()" >Gerar Senha</button>
-          </div>
-  </form> 
-  <form class="mt-2">
-      <div class="input-group mb-3">
+        <div class="input-group mb-1 ">
+          <span class="input-group-text">Nº Dgts:</span>
+          <input type="number" class="form-control"  id="charNum" >
+        </div>
+        <div class="input-group mb-1 ">
+          <span class="input-group-text">Inicio:</span>
+          <input type="date" class="form-control"  id="startDate" >
+        </div>
+        <div class="input-group mb-1 ">
+          <span class="input-group-text">Fim:</span>
+          <input type="date" class="form-control"  id="EndDate" >
+        </div>
+        <div class="input-group mb-1 ">
+          <button type="button" class="btn btn-secondary"  onclick="start()" >Gerar Senha</button>
+        </div>
+    </form> 
+    <!-- Deletar -->
+    <form class="mt-2">
+      <div class="input-group mb-1">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Nova Senha</span>
           </div>
           <input class="form-control" type="text" readonly id="newPass">
         </div>
-  </form>
+    </form>
+    <!-- Até Aqui -->
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Inicio</th>
+        <th scope="col">Fim</th>
+        <th scope="col">Senha</th>
+      </tr>
+    </thead>
+  </table>
   </main>
     
 </body>
