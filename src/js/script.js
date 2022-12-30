@@ -1,11 +1,7 @@
 
     
      // dataBase
-    let passRows = [
-        // { id: 1, startDate: '01/01/2023', endDate: '31/01/2023', password: `Leonardo12345` },
-        // { id: 2, startDate: '01/02/2023', endDate: '28/02/2023', password: `Leonardo54321` },
-        // { id: 3, startDate: '01/03/2023', endDate: '31/03/2023', password: `Leonardo53412` },
-      ];
+    let passRows = [];
         
     // console.log(size)
 
