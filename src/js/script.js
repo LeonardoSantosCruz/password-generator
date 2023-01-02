@@ -76,8 +76,8 @@ function start(){
           <td>${passRow.endDate}</td>
           <td>${passRow.password}</td>
           <td>
-            <button class="btn btn-secondary btn-sm" onclick="showEditForm(${passRow.id})">Edit</button>
-            <button class="btn btn-secondary btn-sm" onclick="deletePassRow(${passRow.id})">Delete</button>
+            <button class="btn btn-secondary btn-sm" onclick="showEditForm(${passRow.id})">Editar</button>
+            <button class="btn btn-secondary btn-sm" onclick="deletePassRow(${passRow.id})">Deletar</button>
           </td>
         </tr>
       </tbody>
