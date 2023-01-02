@@ -23,7 +23,7 @@ function start(){
         const endDate = document.getElementById('endDate').value; 
         
         if (size<1 || size>20){
-          alert('Sua senha deve ter entre 1 e 20 dígitos!' )
+          alert(`Você pediu uma senha com ${size} dígitos, por favor digite uma senha com até 20 dígitos` )
         }else{
           if (startDate >= endDate){
             alert('Intervalo entre início e fim incorretos!');
@@ -106,17 +106,24 @@ function start(){
   }
 
   function updatePassRow() {
+
     //gera novas variaveis buscando no formulário de edição
   const id = document.getElementById('edit-id').value;
   const editStartDate = document.getElementById('edit-start-date').value;
   const editEndDate = document.getElementById('edit-end-date').value;
   const password = document.getElementById('edit-password').value
   const passIndex = passRows.findIndex(passRow => passRow.id == id);
-  passRows[passIndex] = { id: id, startDate: editStartDate, endDate: editEndDate, password: password };
-  console.log(passRows[passIndex])
+  if (password.length<1 || password.length>20){
+    alert(`Você digitou uma senha com ${password.length} dígitos, por favor digite uma senha com até 20 dígitos`)
+  }else{
+    passRows[passIndex] = { id: id, startDate: editStartDate, endDate: editEndDate, password: password };
+    console.log(passRows[passIndex])
+    hideEditForm();
+    renderTable();
+  
+  }
+  
 
-  hideEditForm();
-  renderTable();
   
 }
 
