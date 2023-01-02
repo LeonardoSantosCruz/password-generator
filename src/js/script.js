@@ -125,6 +125,10 @@ function start(){
 
   function deletePassRow(id) {
     passRows = passRows.filter(passRow => passRow.id != id);
+    passRows.forEach(passRow => {
+      passRow.id = passRows.indexOf(passRow) + 1
+      
+    });
     renderTable();
   }
     
