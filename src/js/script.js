@@ -18,21 +18,29 @@ function start(){
 
     const addPassRow = ()=>{
         // 
-        const passId = passRows.length +1
+        const passId =  passRows.length +1
         const startDate = document.getElementById('startDate').value;
         const endDate = document.getElementById('endDate').value; 
         
-        if (startDate > endDate){
-          alert('Intervalo entre início e fim incorretos!');
-        } else{
-          passRows.push({
-            id: passId,
-            startDate: startDate,
-            endDate: endDate,
-            password: newPassword
-          });
+        if (size<1){
+          alert('Erro na quantidade de dígitos da senha')
+        }else{
+          if (startDate >= endDate){
+            alert('Intervalo entre início e fim incorretos!');
+          } else{
+            passRows.push({
+              id: passId,
+              startDate: startDate,
+              endDate: endDate,
+              password: newPassword
+            });
+            document.getElementById('charNum').value= '';
+            document.getElementById('startDate').value='';
+            document.getElementById('endDate').value='';
+          }
         }
         
+          
 
     }
     generateRandomPassword(size)
@@ -76,7 +84,7 @@ function start(){
       `;
 
       table.innerHTML += row;
-      
+          
     });
     
 }
