@@ -24,6 +24,8 @@ function start(){
         
         if (size<1){
           alert('Erro na quantidade de dígitos da senha')
+        }else if(size >20){
+          alert('Senha maior que 20 dígitos! Por favor peça uma senha menor!')
         }else{
           if (startDate >= endDate){
             alert('Intervalo entre início e fim incorretos!');
