@@ -22,16 +22,21 @@ function start(){
         const startDate = document.getElementById('startDate').value;
         const endDate = document.getElementById('endDate').value; 
         
-    
-        passRows.push({
-          id: passId,
-          startDate: startDate,
-          endDate: endDate,
-          password: newPassword
-        });
+        if (startDate > endDate){
+          alert('Intervalo entre início e fim incorretos!');
+        } else{
+          passRows.push({
+            id: passId,
+            startDate: startDate,
+            endDate: endDate,
+            password: newPassword
+          });
+        }
+        
 
     }
     generateRandomPassword(size)
+
     addPassRow()
     renderTable()
    
