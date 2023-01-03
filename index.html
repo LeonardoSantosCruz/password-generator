@@ -54,15 +54,24 @@
     <form onsubmit="updatePassRow();return false">
       <!-- Estilizar -->
       <input type="hidden" id="edit-id">
-      <label for="">Data de início:</label><br>
-      <input type="date" id="edit-start-date"><br>
-
-      <label for="edit-end-date">Data de fim:</label><br>
-      <input type="date" id="edit-end-date"><br>
-      <input type="text" id="edit-password">
+      <div class="input-group mb-1 edit-form-divs" >
+        <span class="input-group-text">Data de início</span>
+        <input type="date" class="form-control"  id="edit-start-date" >
+      </div>
+     
+      <div class="input-group mb-1 edit-form-divs" >
+        <span class="input-group-text">Data de fim</span>
+        <input type="date" class="form-control"  id="edit-end-date" >
+      </div>
+      
+      <div class="input-group mb-1 edit-form-divs" >
+        <span class="input-group-text">Editar senha</span>
+        <input type="text" class="form-control"  id="edit-password" >
+      </div>
+      
       <br>
       <input type="submit" class="btn btn-secondary btn-sm" value="Alterar">
-        <!-- <input type="submit" onclick='updatePassRow()' value="Submit"> -->
+        
       <button class="btn btn-secondary btn-sm" onclick="hideEditForm()">Cancelar</button>
     </form> 
   </div>
