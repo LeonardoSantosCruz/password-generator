@@ -1,4 +1,9 @@
-let passRows = [];
+let passRows = [{
+  id: 1,
+  startDate: '2022-01-01',
+  endDate: '2022-12-01',
+  password: 'Senh4deTest3'
+}];
       
 
 function start(){
@@ -25,7 +30,7 @@ function start(){
         if (size<1 || size>20){
           alert(`Você pediu uma senha com ${size} dígitos, por favor digite uma senha com até 20 dígitos` )
         }else{
-          if (startDate >= endDate){
+          if ((startDate >= endDate)|| (startDate=='')|| (endDate=='')){
             alert('Intervalo entre início e fim incorretos!');
           } else{
             passRows.push({
@@ -34,6 +39,8 @@ function start(){
               endDate: endDate,
               password: newPassword
             });
+            console.log(startDate)
+            console.log(endDate)
             document.getElementById('charNum').value= '';
             document.getElementById('startDate').value='';
             document.getElementById('endDate').value='';
