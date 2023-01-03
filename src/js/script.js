@@ -81,15 +81,20 @@ function start(){
           <td>${passRow.id}</td>
           <td>${passRow.startDate}</td>
           <td>${passRow.endDate}</td>
-          <td>${passRow.password}</td>
+          <td class='text-wrap'>${passRow.password}</td>
           <td>
+          
             <button class="btn btn-secondary btn-sm" onclick="showEditForm(${passRow.id})">Editar</button>
             <button class="btn btn-secondary btn-sm" onclick="deletePassRow(${passRow.id})">Deletar</button>
           </td>
         </tr>
       </tbody>
       `;
-
+/*        <td class='column'>${passRow.id}</td>
+          <td class='column'>${passRow.startDate}</td>
+          <td class='column'>${passRow.endDate}</td>
+          <td class='column'>${passRow.password}</td>
+          <td class='column'></td> */ 
       table.innerHTML += row;
           
     });
