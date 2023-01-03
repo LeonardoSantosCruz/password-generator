@@ -125,7 +125,7 @@ function start(){
     alert(`Você digitou uma senha com ${password.length} dígitos, por favor digite uma senha com até 20 dígitos`)
   }else{
     passRows[passIndex] = { id: id, startDate: editStartDate, endDate: editEndDate, password: password };
-    console.log(passRows[passIndex])
+    
     hideEditForm();
     renderTable();
   

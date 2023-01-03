@@ -26,8 +26,8 @@ form{
     width: 90VW;
 }
 #dataTable{
-    max-width: 700px;
-    width: 90vw;
+    max-width: 650px;
+    width: 80vw;
     word-wrap: break-word;
 }
 .edit-form-divs{
