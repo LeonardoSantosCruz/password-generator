@@ -1,10 +1,10 @@
-// let passRows = [{
-//   id: 1,
-//   startDate: '2022-01-01',
-//   endDate: '2022-12-01',
-//   password: 'Senh4deTest3'
-// }];
-let passRows = [];
+let passRows = [{
+  id: 1,
+  startDate: '2022-01-01',
+  endDate: '2022-12-01',
+  password: 'Senh4deTest3'
+}];
+// let passRows = [];
 
 function start(){
     let size= + document.getElementById('charNum').value

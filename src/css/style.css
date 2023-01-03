@@ -35,6 +35,6 @@ form{
     width: 80vw;
 }
 .column-edit{
-    max-width: 35px;
-    word-wrap: break-word;
+    max-width: 20vw;
+    
 } 
