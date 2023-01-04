@@ -1,10 +1,10 @@
-// let passRows = [{
-//   id: 1,
-//   startDate: '2022-01-01',
-//   endDate: '2022-12-01',
-//   password: 'Senh4deTest3'
-// }];
-let passRows = [];
+let passRows = [{
+  id: 1,
+  startDate: '2022-01-01',
+  endDate: '2022-12-01',
+  password: 'Senh4deTest3'
+}];
+// let passRows = [];
 
 function start(){
     let size= + document.getElementById('charNum').value
@@ -107,10 +107,12 @@ function start(){
     document.getElementById('edit-end-date').value = editedPass.endDate;
     document.getElementById('edit-password').value = editedPass.password;
     document.getElementById('edit-form').style.display = 'block';
-    
+    document.getElementById('edit-form').style.position ='absolute';
+    document.getElementById('main-form').style.opacity = '0.2';
   }
   function hideEditForm() {
     document.getElementById('edit-form').style.display = 'none';
+    document.getElementById('main-form').style.opacity = '1';
   }
 
   function updatePassRow() {
