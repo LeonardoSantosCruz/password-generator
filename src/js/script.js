@@ -1,10 +1,10 @@
-// let passRows = [{
-//   id: 1,
-//   startDate: '2022-01-01',
-//   endDate: '2022-12-01',
-//   password: 'Senh4deTest3'
-// }];
-let passRows = [];
+let passRows = [{
+  id: 1,
+  startDate: '2022-01-01',
+  endDate: '2022-12-01',
+  password: 'Senh4deTest3'
+}];
+// let passRows = [];
 
 function start(){
     let size= + document.getElementById('charNum').value
@@ -126,10 +126,16 @@ function start(){
   if (password.length<1 || password.length>20){
     alert(`Você digitou uma senha com ${password.length} dígitos, por favor digite uma senha com até 20 dígitos`)
   }else{
-    passRows[passIndex] = { id: id, startDate: editStartDate, endDate: editEndDate, password: password };
+    if((startDate >= endDate)|| (startDate=='')|| (endDate=='')){
+      alert('Intervalo entre início e fim incorretos!');
+    } else{
+      passRows[passIndex] = { id: id, startDate: editStartDate, endDate: editEndDate, password: password };
+      hideEditForm();
+      renderTable();
+    }
     
-    hideEditForm();
-    renderTable();
+    
+   
   
   }
   
