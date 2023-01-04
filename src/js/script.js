@@ -126,7 +126,7 @@ function start(){
   if (password.length<1 || password.length>20){
     alert(`Você digitou uma senha com ${password.length} dígitos, por favor digite uma senha com até 20 dígitos`)
   }else{
-    if((startDate >= endDate)|| (startDate=='')|| (endDate=='')){
+    if((editStartDate >= editEndDate)|| (editStartDate=='')|| (editEndDate=='')){
       alert('Intervalo entre início e fim incorretos!');
     } else{
       passRows[passIndex] = { id: id, startDate: editStartDate, endDate: editEndDate, password: password };
