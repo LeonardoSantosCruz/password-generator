@@ -108,9 +108,13 @@ function start(){
     document.getElementById('edit-password').value = editedPass.password;
     document.getElementById('edit-form').style.display = 'block';
     document.getElementById('edit-form').style.position ='absolute';
+    document.getElementById('edit-form').style.zIndex ='3';
     document.getElementById('main-form').style.opacity = '0.2';
+    document.getElementById('z-indexed').style.display='block'
   }
+  
   function hideEditForm() {
+    document.getElementById('z-indexed').style.display='none'
     document.getElementById('edit-form').style.display = 'none';
     document.getElementById('main-form').style.opacity = '1';
   }
